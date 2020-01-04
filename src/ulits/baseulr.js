@@ -1,2 +1,2 @@
- let baseulr ="http://hkzf.zbztb.cn"
- export default baseulr
+
+ export   let API_URL = process.env.REACT_APP_API_URL

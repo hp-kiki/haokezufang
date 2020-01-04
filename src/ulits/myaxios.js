@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { Toast } from 'antd-mobile';
+import { API_URL } from "./baseulr"
 
 //设置基准路径
 const Axios=axios.create({
-    baseURL:"http://hkzf.zbztb.cn"
+    baseURL:API_URL
 })
 
 
