@@ -1,0 +1,26 @@
+.hk_home{
+    background: #f6f5f6;
+    height: 100%;
+
+    // 导航
+    .hk_nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background: #fff;
+        .navs{
+            text-align: center;
+           .nav{
+              img{
+                  width: 48px;
+                  height: 48px;
+              }
+              p{
+                  font-size: 13px;
+                  font-weight: 400;
+                  margin-top:5px;
+              }
+           }
+        }
+      }
+}
