@@ -30,7 +30,7 @@ import {withRouter} from "react-router-dom"
              this.props.history.push('/')
             }}
           >
-           {this.props.children}
+           {this.props.match.path==='/' && this.props.children}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -46,7 +46,7 @@ import {withRouter} from "react-router-dom"
                 this.props.history.push('/info')
             }}
           >
-               {this.props.children}
+               {this.props.match.path==='/info' && this.props.children}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -62,7 +62,7 @@ import {withRouter} from "react-router-dom"
                 this.props.history.push('/list')
             }}
           >
-               {this.props.children}
+               {this.props.match.path==='/list' && this.props.children}
           </TabBar.Item>
           <TabBar.Item
             icon={ <i className="iconfont icon-myinfo"></i>}
@@ -74,7 +74,7 @@ import {withRouter} from "react-router-dom"
                 this.props.history.push('/my')
             }}
           >
-             {this.props.children}
+             {this.props.match.path==='/my' && this.props.children}
           </TabBar.Item>
         </TabBar>
       </div>
