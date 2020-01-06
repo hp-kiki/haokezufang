@@ -24,12 +24,73 @@
         }
       }
 
+      //租房小组
+      .hk_Renting {
+          padding: 5px;
+        .Renting-top {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+          h3 {
+            color: #333333;
+            font-size: 15px;
+          }
+      
+          span {
+            color: #787d82;
+          }
+        }
+      
+        .Renting-bottom {
+            display: flex;
+            flex-wrap: wrap;
+          .Renting-bottomlist {
+              height: 95px;
+              background: #fff;
+              width: 50%;
+             border:5px solid #f6f5f6;
+             display: flex;
+             justify-content: space-between;
+             padding-bottom: 10px;
+            .bottomlist-left {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+              p {
+                font-size: 13px;
+                margin-bottom: 5px;
+              }
+      
+              span {
+                color: #999999;
+                font-size: 12px;
+              }
+            }
+      
+            .bottomlist-right {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+              img {
+                width: 55px;
+                height: 55px;
+              }
+            }
+          }
+        }
+      }
+
       //最新资讯
       .hk_zixun {
           padding: 20px;
+          background: #fff;
         h3 {
             color: #333333;
-            font-size: 16px;
+            font-size: 15px;
         }
       
         .zixun_list {

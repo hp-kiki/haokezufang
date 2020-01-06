@@ -18,7 +18,8 @@ export default class index extends Component {
             {id:3,imgSrc:nav3,title:'地图找房'},
             {id:4,imgSrc:nav4,title:'去出租'},
         ],
-        news:[]
+        news:[],
+        Renting:[]
     }
     //发送请求
     componentDidMount(){
@@ -36,6 +37,14 @@ export default class index extends Component {
           news:res.body
         })
     })
+
+    //获取租房小组的数据
+    axios.get("/home/groups").then(res=>{
+      // console.log(res)
+      this.setState({
+        Renting:res.body
+      })
+  })
 
     }
     render() {
@@ -80,6 +89,29 @@ export default class index extends Component {
                     )}
              </div>
 
+             {/* 租房小组 */}
+             <div className="hk_Renting">
+                  <div className="Renting-top">
+                    <h3>租房小组</h3>
+                    <span>更多</span>
+                  </div>
+                  <div className="Renting-bottom">
+                    {this.state.Renting.map(v=>
+                        <div className="Renting-bottomlist" key={v.id}>
+                            <div className="bottomlist-left">
+                                <p>{v.title}</p>
+                                <span>{v.desc}</span>
+                            </div>
+                            <div className="bottomlist-right">
+                                <img src={`http://hkzf.zbztb.cn${v.imgSrc}`}></img>
+                            </div>
+
+                        </div>
+                      )}
+                    
+                  </div>
+             </div>
+
              {/* 最新资讯 */}
              <div className="hk_zixun">
                <h3>最新资讯</h3>
@@ -102,6 +134,8 @@ export default class index extends Component {
                  
                </div>
              </div>
+
+
                 
             </div>
         )
