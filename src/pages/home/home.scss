@@ -23,4 +23,54 @@
            }
         }
       }
+
+      //最新资讯
+      .hk_zixun {
+          padding: 20px;
+        h3 {
+            color: #333333;
+            font-size: 16px;
+        }
+      
+        .zixun_list {
+          .zixun {
+              display: flex;
+              justify-content: space-between;
+              border-bottom: 1px solid #ddd;
+              padding: 15px 0;
+            .zixun-left {
+                flex: 1;
+              img {
+                
+                width: 120px;
+                height: 90px;
+              }
+      
+            }
+      
+      
+            .zixun-right{
+                width: 85%;
+                padding: 0 10px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                .right-top{
+                    font-weight: 600;
+                }
+                .right-bottom{
+                    display: flex;
+                    justify-content: space-between;
+                    color: #9c9fa1;
+                    font-size: 13px;
+                    .form{}
+                    .date{}
+                }
+            }
+
+          }
+
+
+        }
+      }
 }

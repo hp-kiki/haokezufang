@@ -17,16 +17,26 @@ export default class index extends Component {
             {id:2,imgSrc:nav2,title:'合租'},
             {id:3,imgSrc:nav3,title:'地图找房'},
             {id:4,imgSrc:nav4,title:'去出租'},
-        ]
+        ],
+        news:[]
     }
     //发送请求
     componentDidMount(){
+      //获取轮播图数据
         axios.get("/home/swiper").then(res=>{
             // console.log(res)
             this.setState({
                 swipriimg:res.body
             })
         })
+      //获取最新资讯数据
+      axios.get("/home/news").then(res=>{
+        // console.log(res)
+        this.setState({
+          news:res.body
+        })
+    })
+
     }
     render() {
         return (
@@ -57,6 +67,7 @@ export default class index extends Component {
           ))}
         </Carousel>
                </div>
+
              {/* 导航 */}
              <div className="hk_nav">
                 {this.state.nav.map(v=>
@@ -67,6 +78,29 @@ export default class index extends Component {
                         </div>
                     </div>
                     )}
+             </div>
+
+             {/* 最新资讯 */}
+             <div className="hk_zixun">
+               <h3>最新资讯</h3>
+               <div className="zixun_list">
+                 {this.state.news.map(v=>
+                  <div className="zixun" key={v.id}>
+                    <div className="zixun-left">
+                      <img src={`http://hkzf.zbztb.cn${v.imgSrc}`}></img>
+                     
+                    </div>
+                    <div className="zixun-right">
+                      <div className="right-top">{v.title}</div>
+                      <div className="right-bottom">
+                      <span className="form">{v.from}</span>
+                        <span className="date">{v.date}</span>
+                      </div>
+                    </div>
+                  </div>
+                  )}
+                 
+               </div>
              </div>
                 
             </div>
