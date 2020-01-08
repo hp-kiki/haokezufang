@@ -1,0 +1,63 @@
+.hk_citylist{
+    background: #ffffff;
+    height: 100vh;
+    .hk_citylist-header{
+        background: #f6f5f6;
+        height: 45px;
+        line-height: 45px;
+
+        width: 100%;
+        .hk_citylist-nei{
+            width: 55%;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 15px;
+        }
+        span{
+            font-size: 18px;
+        }
+    }
+    .hk_citylist_bottom{
+        display: flex;
+        justify-content:space-between;
+        height: 100vh;
+        .citylist_bottom-right{
+            .bottom-rights{
+               
+            }
+        }
+    }
+    
+    .citylist{
+     
+        .city-title{
+            height: 49px;
+            line-height: 49px;
+            color: #999999;
+            padding-left: 15px;
+        }
+        .city-label{
+            padding-left: 15px;
+            height: 49px;
+            line-height: 49px;
+            border-bottom: 1px solid #ddd;
+        }
+    }   
+    .citylist_bottom-right{
+        padding:10px 5px 0 0;
+        z-index: 999;
+        .bottom-rights{
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1px;
+        }
+        .active{
+            background: #21b97a;
+            border-radius: 50%;
+       }
+       
+    }
+
+}

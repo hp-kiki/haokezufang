@@ -7,6 +7,7 @@ import nav1 from "../../asstes/images/nav-1.png"
 import nav2 from "../../asstes/images/nav-2.png" 
 import nav3 from "../../asstes/images/nav-3.png" 
 import nav4 from "../../asstes/images/nav-4.png" 
+import Search from "../../components/search/seach"
 
 export default class index extends Component {
     state={
@@ -50,8 +51,11 @@ export default class index extends Component {
     render() {
         return (
             <div className="hk_home">
+          
              {/* 轮播图 */}
               <div className="Hk_swiper">
+                    {/* 搜索 */}
+              <Search />
                <Carousel
                autoplay={true}
                infinite

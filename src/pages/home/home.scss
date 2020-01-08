@@ -1,6 +1,18 @@
 .hk_home{
     background: #f6f5f6;
     height: 100%;
+    .Hk_swiper{
+        position: relative;
+        .search{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 999;
+            top:25px;
+            padding:0 10px 0 20px;
+        }
+    }
 
     // 导航
     .hk_nav{
