@@ -1,0 +1,73 @@
+.hk_info{
+    .hk_info-hader{
+        position: fixed;
+        top:5px;
+        left:50px;
+        width: calc(100vw - 50px);
+       bottom: 5px;
+        .Srarch{
+            
+            
+        }
+    }
+}
+
+.search .search-icon i.iconfont.icon-map{
+    color: #00ae6f;
+}
+
+.citylist{
+    height:calc(100vh - 45px);
+    margin-bottom: 70px;
+    overflow: hidden;
+    // div{
+    //     height: 100%;
+    //     width: 100%;
+    // }
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+
+    // height: 120px;
+    img{
+        width: 115px;
+        // height: 80px;
+        // width: 13%;
+    }
+    .list-right{
+        flex: 1;
+        padding-left: 15px;
+        p,span,h4{
+            margin: 5px 0;
+        }
+        .list-right-two{
+            font-size: 12px;
+            color: #ccc;
+
+        }
+        .list-right-htree{
+            background: #e1f5f8;
+            padding: 3px;
+            color: #43c1cf;
+            font-size: 12px;
+            border-radius: 3px;
+            margin: 5px 10px 5px 0;
+            
+        }
+        .list-right-jiage{
+            color: #fa5842;
+            margin: 5px 0;
+           font-weight: 600;
+           font-size: 16px;
+            span{
+                font-size: 12px;
+                font-weight:400;
+                color: #fa614c;
+            }
+        }
+    }
+}
+
